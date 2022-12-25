@@ -1,0 +1,33 @@
+.img {
+  height: 100%;
+  background-size: cover;
+}
+
+.img-edit {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+
+.img-edit {
+  cursor: pointer;
+}
+
+.ActC-shered {
+  margin-left: 7px;
+  color: #a1a1a1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bg-card {
+  background-color: #181818;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+     width: 100%;
+     height: 200px;
+    }
+}

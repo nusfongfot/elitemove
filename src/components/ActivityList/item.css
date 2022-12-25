@@ -1,0 +1,29 @@
+.bg-button {
+  background-color: #181818;
+  color: #fff;
+}
+
+.active {
+  background-color: #fff;
+  color: black;
+  width: 100%;
+}
+
+.createBtn {
+  position: -webkit-fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.test:hover {
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  height: 680px;
+  width: 350px;
+  position: fixed;  
+}

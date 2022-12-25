@@ -1,0 +1,329 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.alice-carousel__prev-btn-wrapper {
+	display: none;
+}
+
+.alice-carousel__next-btn-wrapper {
+	display: none;
+}
+
+/*start nav*/
+.navbar {
+	background-color: var(--black); 
+}
+
+.navbar-toggler {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.link {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	margin: 0px 15px;
+}
+
+.link:hover {
+	color: var(--purple) !important;
+}
+
+/*end nav*/
+
+/*Hero section*/
+.left_hero {
+	display: flex;
+}
+
+.img-hero {
+	width: 755px;
+	height: 450px;
+}
+
+#text_hero {
+	color: white;
+}
+
+.title_hero {
+	/* color: orange; */
+	color: var(--purple);
+	font-size: 4rem;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.btn-group {
+	display: flex;
+	gap: 40px;
+}
+
+.btn-start {
+	/* background-color: hsla(39, 100%, 50%, 1); */
+	border: none;
+	outline: none;
+	padding: 10px;
+	width: 140px;
+	/* color: black; */
+	background: transparent;
+	color: var(--white);
+	border: 1px solid var(--purple);
+}
+
+.btn-login {
+	/* background-color: hsla(0, 0%, 100%, 1); */
+	border: none;
+	outline: none;
+	padding: 10px;
+	width: 140px;
+	/* color: black; */
+	background-color: var(--purple);
+	color: var(--white);
+	border: 1px solid var(--purple);
+}
+
+.btn-login:hover {
+	/* background-color: rgba(255, 255, 255, 0.5); */
+	opacity: 0.8;
+}
+
+.btn-start:hover {
+	/* background-color: rgb(189, 123, 2); */
+	background: var(--purple);
+}
+
+.span_hero {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+	.img-hero {
+		width: 600px;
+		height: 250px;
+	}
+
+	.span_hero {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/*end Hero section*/
+
+/*bmi section*/
+.bmi_img {
+	width: 755px;
+	height: 450px;
+}
+
+#text_bmi {
+	color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#result_bmi {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	background-color: white;
+	color: black;
+	padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	.bmi_img {
+		width: 600px;
+		height: 250px;
+	}
+
+	#result_bmi {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+}
+
+/*end*/
+
+/*about section*/
+#text_about {
+	color: white;
+}
+
+hr {
+	/* border: 1px solid orange; */
+	border: 1px solid var(--purple);
+}
+
+.about_span {
+	font-size: 18px;
+	width: 50%;
+	margin-top: 1rem;
+}
+
+.about_span_1 {
+	/* color: orange; */
+	width: 50%;
+	color: var(--purple);
+}
+
+.read_more {
+	/* color: orange; */
+	color: var(--purple);
+}
+
+.img_train {
+	width: 500px;
+	height: 350px;
+}
+
+.img_small {
+	width: 160px;
+	height: 80px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.img_train {
+		width: 500px;
+		height: 250px;
+	}
+
+	.about_span,
+	.about_span_1 {
+		padding: 0 10px;
+		font-size: 18px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about_span,
+	.about_span_1 {
+		padding: 0 10px;
+		font-size: 18px;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+/*end*/
+
+/*Our team*/
+#text_team {
+	color: white;
+}
+
+.img_container {
+	width: 100%;
+	height: 300px;
+	padding-right: 20px;
+}
+
+.img_arrow {
+	width: 1.5rem;
+	cursor: pointer;
+	margin-right: -15px;
+}
+
+.img_arrow_left {
+	width: 1.5rem;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.img_team {
+	width: 100%;
+}
+
+@media screen and (max-width: 468px) {
+	.img-fluid {
+		padding: 0;
+	}
+}
+
+/*end*/
+
+/*Contact*/
+#box_call {
+	background-color: #1a1a1a;
+}
+
+#text_contact {
+	color: white;
+}
+
+.text_call {
+	width: 50%;
+}
+
+.head_call {
+	padding: 20px 0;
+	/* color: orange; */
+	color: var(--purple);
+}
+
+@media screen and (max-width: 576px) {
+	.text_call {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text_call {
+		width: 100%;
+	}
+}
+
+/*End*/
+
+/*Footer*/
+.title_footer {
+	width: 70%;
+}
+
+.contact_info {
+	line-height: 2rem;
+}
+
+.contact_info > li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 50px;
+	background: var(--purple);
+}
+
+.tab-info {
+	display: flex;	
+	gap: 50px;
+	margin: 15px 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.tab > ul > li > a:hover {
+	color: var(--black);
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+	font-size: 18px;
+}
+
+/*end*/

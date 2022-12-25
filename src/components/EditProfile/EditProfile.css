@@ -1,0 +1,25 @@
+.edit-profile {	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--black);
+	background: url("../../images/header-purple.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	backdrop-filter: blur(0.5rem);
+	min-height: 100vh;
+	position: absolute;
+	top: 30px;
+}
+.edit-profile-card {
+	background: var(--black-a);
+	width: 95%;
+	backdrop-filter: blur(0.3rem);
+	z-index: 2;
+}
+
+.weekly-goal-title {
+	color: var(--yellow);
+}

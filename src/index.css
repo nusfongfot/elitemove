@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+	--purple: hsla(266, 99%, 56%, 1);
+	--yellow: hsla(36, 96%, 71%, 1);
+	--black: hsla(0, 0%, 8%, 1);
+	--black-a: hsla(0, 0%, 10%, 0.9);
+	--grey: hsla(240, 5%, 16%);
+	--white: hsla(0, 0%, 100%, 1);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+body {
+	color: var(--white);
+	background: var(--black-a) !important;
+	max-height: 100vh;
+	max-width: 100vw;
+}
+
+@layer components {
+	/* .rounded-base {
+    @apply rounded-[10px];
+  } */
+	.btn-primary {
+		@apply w-full bg-purple-p-500 h-[60px]  text-white text-xl font-semibold hover:bg-purple-p-600 drop-shadow-2xl;
+	}
+	.input-primary {
+		@apply w-full  h-[50px] bg-gray-light text-black px-6 font-thin text-2xl;
+	}
+}
+
+@screen semi-lg {
+	.btn-primary {
+		@apply w-[350px];
+	}
+}
+input::placeholder {
+	@apply text-gray-600 font-thin text-2xl text-center;
+}
+
+input {
+	outline: none;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+.loader-container {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	background: rgba(100, 100, 100, 0.05);
+	height: 100%;
+	display: flex;
+	z-index: 20;
+}
+.loader {
+	border-top-color: var(--purple);
+	-webkit-animation: spinner 1.5s linear infinite;
+	animation: spinner 1.5s linear infinite;
+	margin: auto;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

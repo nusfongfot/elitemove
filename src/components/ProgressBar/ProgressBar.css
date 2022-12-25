@@ -1,0 +1,20 @@
+.progress-bar {
+  position: relative;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  border-radius: 0.375rem;
+  background: var(--white);
+}
+
+.progress-bar::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: calc(var(--width, 0) * 1%);
+  min-width: 1rem;
+  max-width: calc(100%);
+  background: var(--bar-color);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+}

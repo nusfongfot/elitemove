@@ -1,0 +1,21 @@
+body {
+	background-color: var(--black);
+	max-height: 100vh;
+}
+
+#firstNameInput,
+#lastNameInput,
+#bioInput,
+#birthDateInput,
+#genderInput,
+#heightInput,
+#weightInput,
+#weeklyGoalInput,
+#caloriesInput {
+	border-radius: 0;
+}
+
+h2 {
+	font-style: normal;
+	font-weight: 500;
+}

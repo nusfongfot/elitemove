@@ -1,0 +1,31 @@
+.motivation-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 20rem;
+  height: 25rem;
+  background: var(--black);
+  color: var(--yellow);
+  box-shadow: 0 0 1px var(--yellow);
+}
+
+.motivated {
+  width: 80%;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.25;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: right;
+  margin-top: 1rem;
+}

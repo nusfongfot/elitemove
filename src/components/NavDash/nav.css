@@ -1,0 +1,12 @@
+.box-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.img-user {
+  border-radius: 50%;
+  width: 30px;
+  aspect-ratio: 1;
+}
