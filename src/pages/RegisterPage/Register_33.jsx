@@ -1,3 +1,5 @@
+/* eslint-disable no-else-return */
+/* eslint-disable no-alert */
 /* eslint-disable consistent-return */
 /* eslint-disable prefer-regex-literals */
 /* eslint-disable no-unused-vars */
@@ -74,23 +76,26 @@ function RegisterPage() {
     const { value, error } = formSchema.validate(userData);
     if (error) {
       const e = Object.entries(error);
-      console.log(e);
       const message = error?.details[0].message;
       console.log(error.details);
       if (message.toLowerCase().includes('password')) {
         return alert('password must be alphabet and number and length between 6-20');
       }
       const fieldError = error.details.map((item) => alert(item.message));
-    }
-    try {
-      startLoading(); // loading == true
+    } else {
+      startLoading();
       await AUTH.register(userData);
-    } catch (err) {
-      // console.log(err);
-    } finally {
       stopLoading();
-      console.log('finally register_33');
     }
+    // try {
+    //   startLoading(); // loading == true
+    //   await AUTH.register(userData);
+    // } catch (err) {
+    //   // console.log(err);
+    // } finally {
+    //   stopLoading();
+    //   console.log('finally register_33');
+    // }
   };
 
   //   console.log(userData);
