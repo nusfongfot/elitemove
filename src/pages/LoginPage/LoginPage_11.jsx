@@ -41,9 +41,13 @@ function LoginPage() {
     }
 
     try {
-      startLoading(); // loading == true
-      await AUTH.login({ email, password });
-      navigate('/dashboard');
+      if (email !== '' && password !== '') {
+        startLoading(); // loading == true
+        const login = await AUTH.login({ email, password });
+        if (login) {
+          navigate('/dashboard');
+        }
+      }
     } catch (err) {
       console.log(err);
     } finally {
