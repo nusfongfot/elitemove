@@ -75,7 +75,7 @@ function LineChart({ active, linear }) {
     labels: handleOnChaneLabal(active),
     datasets: [
       {
-        label: 'Minuet',
+        label: 'Minutes',
         data: handleOnChaneData(active),
         borderColor: 'rgb(255, 237, 99)',
         backgroundColor: 'rgb(255, 237, 99)',
