@@ -65,7 +65,7 @@ function AuthContextProvider({ children }) {
       setAccessToken(token);
       toast.success('Login Succesfully!', {
         position: 'top-right',
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -82,7 +82,7 @@ function AuthContextProvider({ children }) {
       // }
       toast.error(error.response.data.message, {
         position: 'top-right',
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

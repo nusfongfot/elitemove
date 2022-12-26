@@ -25,7 +25,7 @@ function UploadPhoto({
       await AUTH.updateUserProfile(formData);
       toast.success('UpdatePhoto Successfully!', {
         position: 'top-right',
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

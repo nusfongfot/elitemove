@@ -69,17 +69,6 @@ function CreateActivity() {
     navigate('/dashboard');
   };
   // console.log('photo', file);
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    // console.log('Create activity', activityData);
-    const { value, error } = formSchema.validate(activityData);
-    if (error) {
-      const fieldError = error.details.map((item) => alert(item.message));
-    }
-    // SEND API TO UPDATE
-
-    // navigate('/');
-  };
   const createActivityData = async () => {
     // Send Request
     try {
@@ -107,16 +96,6 @@ function CreateActivity() {
       }
       startLoading();
       await ACTIVITY.createActivity(formData);
-      toast.success('Create Activity Succesfully!', {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
-      });
       navigate('/dashboard');
     } catch (error) {
       console.log(error);
@@ -124,8 +103,25 @@ function CreateActivity() {
       stopLoading();
     }
   };
-  const handleOnClick = () => {
-    createActivityData();
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // console.log('Create activity', activityData);
+    const { value, error } = formSchema.validate(activityData);
+    if (error) {
+      const fieldError = error.details.map((item) => alert(item.message));
+    } else {
+      toast.success('Create Activity Succesfully!', {
+        position: 'top-right',
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
+      createActivityData();
+    }
   };
 
   return (
@@ -265,7 +261,6 @@ function CreateActivity() {
             <button
               type="submit"
               className="btn-primary self-center flex-1"
-              onClick={handleOnClick}
             >
               Save
             </button>
