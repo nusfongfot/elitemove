@@ -5,6 +5,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Joi from 'joi';
 import {
   Col, Row, Container, Button, Form,
@@ -85,6 +86,16 @@ function RegisterPage() {
     } else {
       startLoading();
       await AUTH.register(userData);
+      toast.success('Register Succesfully!', {
+        position: 'top-right',
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      });
       stopLoading();
     }
     // try {
